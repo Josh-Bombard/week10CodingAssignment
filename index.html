@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo App</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container bg-secondary">
+
+  <!-- create a card and put a form inside of it that creates a meal prep table, need to have a day of the week form, a meal form, and an ingredients form -->
+
+  <!-- head the website with what it is -->
+  <h1 class="text-light text-center">Meal Prep</h1>
+  <br>
+  <div class="card bg-secondary">
+    <div class="card-body">
+      <!-- create two separate rows for day of the week/ and meal. Create a new row for ingredients. -->
+      <div class="row">
+        <div class="col-sm">
+          <div class="form-group">
+            <label for="new-meal-date">Day of The Week</label>
+            <input type="date" class="form-control" id="new-meal-date">
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="form-group">
+            <label for="new-meal">Meal</label>
+            <input type="text" class="form-control" id="new-meal" placeholder="Meal">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="form-group">
+            <label for="new-ingredients">Ingredients</label>
+            <input type="text" class="form-control" id="new-ingredients" placeholder="Ingredients">
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- make a button to push the data onto the table. -->
+        <button id="add" class="btn btn-dark">Create</button>
+      </div>
+    </div>
+  </div>
+  <!-- create a table and headers to push the above info into -->
+  <table id="list" class="table table-secondary table-striped">
+    <tr>
+      <th>Meal</th>
+      <th>Date Created</th>
+      <th>DOTW</th>
+      <th>Ingredients</th>
+      <th>Actions</th>
+    </tr>
+  </table>
+
+
+
+
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
